@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$light-color: #fff;
+$accent-color: #65e496;
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+.page-main {
+    background-image: url(./../img/bg-main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $light-color;
+}
+
+.wrap {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 50px 0px 166px 0px;
+    &__logo {
+        display: block;
+        width: 137px;
+        height: 30px;
+        background-image: url(./../img/Logo.svg);
+        background-repeat: no-repeat;
+    }
+    &__list {
+        display: flex;
+        justify-content: flex-end;
+        // align-items: center;
+        list-style-type: none;
+        font-family: 'Open Sans', serif;
+        &-item {
+            margin: 0px 0px 0px 26px;
+            padding-bottom: 5px;
+            border-bottom: 3px solid transparent;
+            transition: 0.3s;
+            &:hover {
+                border-bottom: 3px solid $accent-color;
+            }
+        }
+        &-link {
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 0.5px;
+            font-size: 15px;
+            line-height: 24px;
+        }
+        &-item.active {
+            border-bottom: 3px solid $accent-color;
+        }
+    }
+}
+
+.block-text {
+    flex-basis: calc(100% - 500px);
+    padding: 0px 0px 162px 0px;
+    &__name {
+        font-family: 'Open Sans', serif;
+        font-size: 18px;
+        margin-bottom: 43px;
+    }
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        span {
+            display: block;
+            color: $accent-color;
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+    }
+    &__decription {
+        font-family: 'Open Sans', serif;
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 35px;
+    }
+    &__btn {
+        display: block;
+        background-color: $accent-color;
+        color: $light-color;
+        text-decoration: none;
+        max-width: 250px;
+        text-align: center;
+        border-radius: 3px;
+        font-size: 18px;
+        padding: 18px 20px 18px 20px;
+        margin-bottom: 23px;
+        letter-spacing: 0.7px;
+    }
+}
+
+.block-book {
+    display: flex;
+    justify-content: space-between;
+    &-demo {
+        display: block;
+        background-image: url(./../img/book.svg);
+        background-repeat: no-repeat;
+        width: 447px;
+        height: 643px;
+        flex-basis: 447px;
+    }
+}
