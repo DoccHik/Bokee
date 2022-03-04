@@ -70,7 +70,10 @@ body {
     &__name {
         font-family: 'Open Sans', serif;
         font-size: 18px;
-        margin-bottom: 43px;
+        margin-bottom: 30px;
+    }
+    &__name-top {
+        margin-top: 16px;
     }
     &__title {
         font-size: 48px;
@@ -87,7 +90,7 @@ body {
         font-family: 'Open Sans', serif;
         font-size: 15px;
         line-height: 24px;
-        margin-bottom: 35px;
+        margin-bottom: 50px;
     }
     &__btn {
         display: block;
@@ -114,5 +117,49 @@ body {
         width: 447px;
         height: 643px;
         flex-basis: 447px;
+    }
+}
+
+.block-author {
+    display: flex;
+    justify-content: space-between;
+    padding: 160px 0px 60px 0px;
+    // margin-bottom: 160px;
+}
+
+.block-text {
+    max-width: 572px;
+}
+
+.block-ava {
+    position: relative;
+    &__sub-img {
+        position: absolute;
+        z-index: -1;
+        padding: 0px 0px 0px 0px;
+        right: 0;
+    }
+    &__img {
+        margin-top: 45px;
+        margin-right: 45px;
+    }
+}
+
+.block-counter {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 0px 160px 0px;
+    p {
+        font-size: 18px;
+        text-align: center;
+    }
+    span {
+        display: block;
+        text-align: center;
+        font-size: 80px;
+        line-height: 44px;
+        font-weight: 100;
+        color: $accent-color;
+        margin-bottom: 32px;
     }
 }
