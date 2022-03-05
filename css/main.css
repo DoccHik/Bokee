@@ -4,6 +4,17 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+.none {
+  display: none; }
+
+body::-webkit-scrollbar {
+  width: 5px; }
+  body::-webkit-scrollbar::-webkit-scrollbar-track {
+    background-color: #fff; }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #65e496; }
+
 body {
   font-family: 'Roboto Slab', serif; }
 
@@ -49,8 +60,8 @@ body {
       margin: 0px 0px 0px 26px;
       padding-bottom: 5px;
       border-bottom: 3px solid transparent;
-      -webkit-transition: 0.3s;
-      transition: 0.3s; }
+      -webkit-transition: 0.3s ease-out;
+      transition: 0.3s ease-out; }
       .header__list-item:hover {
         border-bottom: 3px solid #65e496; }
     .header__list-link {
@@ -123,9 +134,9 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 160px 0px 60px 0px; }
-
-.block-text {
-  max-width: 572px; }
+  .block-author__block-text {
+    max-width: 572px;
+    padding: 0px 0px 0px 0px; }
 
 .block-ava {
   position: relative; }
@@ -144,17 +155,39 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 0px 0px 160px 0px; }
+  margin: 160px 0px 160px 0px; }
   .block-counter p {
+    font-family: 'Open Sans', serif;
     font-size: 18px;
     text-align: center; }
-  .block-counter span {
-    display: block;
-    text-align: center;
-    font-size: 80px;
+    .block-counter p span {
+      font-family: 'Roboto Slab', serif;
+      display: block;
+      font-size: 80px;
+      line-height: 44px;
+      font-weight: 100;
+      color: #65e496;
+      margin-bottom: 32px; }
+
+.page-book-content {
+  background-color: #f5f6fa;
+  padding: 160px 0px 0px 0px; }
+  .page-book-content__title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 48px;
+    font-weight: 700;
     line-height: 44px;
-    font-weight: 100;
-    color: #65e496;
-    margin-bottom: 32px; }
+    text-align: center;
+    margin-bottom: 25px; }
+  .page-book-content__subtitle {
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    line-height: 4px;
+    text-align: center;
+    color: #65e496; }
+  .page-book-content__block-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 /*# sourceMappingURL=main.css.map */
