@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab:wght@100;400;700&display=swap" rel="stylesheet">
     <!-- Style -->
     <link rel="stylesheet" href="./css/main.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -89,33 +91,33 @@
             </div>
         </div>
     </div>
-    <div class="page-book-content page-gray none">
+    <div class="page page-gray">
         <div class="wrap">
-            <h2 class="page-book-content__title">Book contents</h2>
-            <p class="page-book-content__subtitle">Let's see what we have covered in the book</p>
-            <div class="page-book-content__block-about">
-                <div>
+            <h2 class="page__title">Book contents</h2>
+            <p class="page__subtitle">Let's see what we have covered in the book</p>
+            <div class="block-about">
+                <div class="block-about-text">
                     <h3>About the book</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali qua. Ut enim ad minim veniam, quis nostrud exercitation ull amco laboris nisi ut aliquip ex ea commodo consequat.
+                    <p class="block-about-text__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali qua. Ut enim ad minim veniam, quis nostrud exercitation ull amco laboris nisi ut aliquip ex ea commodo consequat.
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillu m dolore eu fugiat nulla pariatur.</p>
-                    <div>
-                        <p>Featured in:</p>
-                        <ul>
+                    <div class="block-about-social">
+                        <p class="block-about-social__title">Featured in:</p>
+                        <ul class="block-about-social__list">
                             <li>
-                                <a href="#"></a>
+                                <a href="#"><i class="fa-brands fa-stack-overflow"></i></a>
                             </li>
                             <li>
-                                <a href="#"></a>
+                                <a href="#"><i class="fa-brands fa-amazon"></i></a>
                             </li>
                             <li>
-                                <a href="#"></a>
+                                <a href="#"><i class="fa-brands fa-sass"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="page-book-content__table-row">
+                <div class="block-about-table">
                     <h3>Table of content</h3>
-                    <ol>
+                    <ol class="block-about-table__list">
                         <li>Lorem ipsum dolor sit amet</li>
                         <li>Consectetur adipisicing elit</li>
                         <li>Labore et dolore magna</li>
@@ -133,7 +135,7 @@
         </div>
     </div>
 
-
+    <script src="https://kit.fontawesome.com/32aa6fb41c.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
