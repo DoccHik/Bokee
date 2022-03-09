@@ -96,6 +96,11 @@ h3 {
             border-left: 50vw solid transparent;
         }
     }
+    &-skills {
+        @media(max-width: 920px) {
+            padding: 80px 0px 80px 0px;
+        }
+    }
 }
 
 .wrap {
@@ -457,7 +462,9 @@ h3 {
     &__block-text {
         max-width: 572px;
         padding: 0px 0px 0px 0px;
-        @media (max-width: 1024px) {}
+        @media (max-width: 1024px) {
+            text-align: center;
+        }
     }
 }
 
@@ -489,7 +496,7 @@ h3 {
         margin: 45px 45px 0px 45px;
         @media (max-width: 1024px) {
             width: 100%;
-            margin: 45px 45px 0px 0px;
+            margin: 45px 0px 0px 0px;
         }
         @media (max-width: 920px) {
             // margin: 0px 0px 0px 0px;
@@ -502,6 +509,9 @@ h3 {
     &__img--left {
         margin-top: 50px;
         margin-left: 50px;
+        @media (max-width: 500px) {
+            margin-left: 0px;
+        }
     }
 }
 
@@ -790,8 +800,16 @@ h3 {
 .block-blog {
     display: flex;
     justify-content: space-between;
+    @media(max-width: 1200px) {
+        flex-direction: column;
+        align-items: center;
+    }
     &-item {
-        width: 369px;
+        max-width: 369px;
+        margin-bottom: 30px;
+        @media(max-width: 400px) {
+            width: 100%;
+        }
     }
     h4 {
         font-size: 18px;
@@ -809,6 +827,9 @@ h3 {
         height: 224px;
         overflow: hidden;
         position: relative;
+        @media(max-width: 400px) {
+            width: 100%;
+        }
         img {
             width: 369px;
             height: 224px;
@@ -839,12 +860,19 @@ h3 {
         margin: 84px auto 0;
         padding: 13px 0;
         box-shadow: 0 -2px #adedbb inset;
+        @media(max-width: 1200px) {
+            margin: 35px auto 0;
+        }
     }
 }
 
 .block-letter {
     display: flex;
     justify-content: space-between;
+    @media(max-width: 1024px) {
+        display: block;
+        text-align: center;
+    }
     &-item {
         flex-basis: 49%;
     }
@@ -856,12 +884,20 @@ h3 {
         margin-bottom: 23px;
         letter-spacing: 2px;
         margin-top: 8px;
+        @media(max-width: 400px) {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
     }
     &__text {
         font-family: 'Open Sans', serif;
         line-height: 24px;
         font-size: 15px;
         letter-spacing: 0.75px;
+        @media(max-width: 1024px) {
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
     }
     &__input {
         display: block;
@@ -876,6 +912,10 @@ h3 {
         color: $gray-color;
         box-sizing: border-box;
         letter-spacing: 0.6px;
+        @media(max-width: 1024px) {
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
         &::placeholder {
             font-family: 'Open Sans', serif;
             font-size: 15px;
@@ -899,6 +939,10 @@ h3 {
         box-shadow: 0 -2px #adedbb inset;
         display: block;
         width: 100%;
+        @media(max-width: 1024px) {
+            max-width: 500px;
+            margin: 0 auto;
+        }
         &:focus {
             outline: none;
         }
@@ -915,6 +959,10 @@ h3 {
     display: flex;
     justify-content: space-between;
     line-height: 24px;
+    @media(max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+    }
     &-item {
         flex-basis: 30%;
     }
@@ -925,6 +973,9 @@ h3 {
         background-image: url(./../img/Logo.svg);
         background-repeat: no-repeat;
         margin-bottom: 30px;
+        @media(max-width: 768px) {
+            margin: 0 auto 20px;
+        }
     }
     &__text {
         font-family: 'Open Sans', serif;
@@ -950,6 +1001,9 @@ h3 {
     &-social {
         display: flex;
         list-style-type: none;
+        @media(max-width: 768px) {
+            justify-content: center;
+        }
         &>li {
             margin-right: 10px;
             margin-bottom: 15px;
