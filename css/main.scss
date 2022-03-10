@@ -17,6 +17,12 @@ $gray-color: #9191b5;
     display: none;
 }
 
+body {
+    &.lock {
+        overflow: hidden;
+    }
+}
+
 body::-webkit-scrollbar {
     width: 5px;
     &::-webkit-scrollbar-track {
@@ -149,7 +155,7 @@ h3 {
             margin-bottom: 20px;
         }
         @media(max-width: 670px) {
-            margin: 0px 0px 0px 0px;
+            margin: 0px 0px 20px 0px;
         }
     }
     &__list {
@@ -159,20 +165,41 @@ h3 {
         list-style-type: none;
         font-family: 'Open Sans', serif;
         @media(max-width: 670px) {
-            text-align: center;
-            position: absolute;
-            display: block;
-            left: -100%;
+            position: fixed;
             top: 0;
+            left: -100%;
             width: 100%;
+            height: 100%;
+            z-index: 10;
+            text-align: center;
+            display: block;
             background-color: $bg-dark-color;
             transition: 0.5s ease-in;
-            padding: 110px 0px 0px 0px;
-            overflow: hidden;
-            &.open-menu {
+            padding: 120px 0px 0px 0px;
+            overflow: auto;
+            &::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 130px;
+                background-color: $bg-dark-color;
+                transition: 0.5s ease-in;
+                // z-index: 10;
+            }
+            &.active {
                 left: 0;
-                z-index: 2;
-                transition: 0.5s ease-in 0.3s;
+                &::before {
+                    content: '';
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 130px;
+                    background-color: $bg-dark-color;
+                    // z-index: 10;
+                }
             }
         }
         &-item {
@@ -204,47 +231,52 @@ h3 {
     }
     &-menu-burger {
         display: none;
-        z-index: 2;
         @media(max-width: 670px) {
-            transition: 0.3 ease;
-            position: relative;
-            width: 40px;
-            height: 35px;
+            z-index: 10;
             display: block;
+            position: relative;
+            width: 30px;
+            height: 18px;
+            cursor: pointer;
+            transition: all 0.3 ease 0.3s;
             span,
-            &::after,
-            &::before {
-                content: '';
+            &::before,
+            &::after {
                 position: absolute;
-                height: 3px;
+                left: 0;
                 width: 100%;
+                height: 2px;
+                border-radius: 3px;
                 background-color: $accent-color;
-                margin: 0 auto;
+            }
+            &::before,
+            &::after {
+                content: '';
+                transition: 0.5s ease 0.3s;
+            }
+            &::before {
+                top: 0;
+            }
+            &::after {
+                bottom: 0;
+            }
+            span {
+                top: 50%;
+                transform: scale(1) translate(0, -50%);
                 transition: 0.3s ease 0.3s;
             }
-            span {
-                top: 16px;
-            }
-            &::after {
-                top: 5px;
-            }
-            &::before {
-                bottom: 5px;
-            }
-        }
-        &.open-menu {
-            span {
-                // opacity: 0;
-                width: 0;
-                transition: 0.3s;
-            }
-            &::before {
-                transform: rotate(-45deg);
-                bottom: 16px;
-            }
-            &::after {
-                transform: rotate(45deg);
-                top: 16px;
+            &.active {
+                span {
+                    transform: scale(0) translate(0, -50%);
+                }
+                &::before {
+                    top: 50%;
+                    transform: rotate(-45deg) translate(0, -50%);
+                }
+                &::after {
+                    bottom: 50%;
+                    transform: rotate(45deg) translate(0, 50%);
+                }
             }
         }
     }
